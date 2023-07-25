@@ -1,0 +1,48 @@
+$app-color: #12BB43;
+@import url(nulestyle.css);
+
+.app {
+   font-size: 14px;
+   font-family: Oswald;
+   color: $app-color;
+}
+
+.page {}
+
+.container {
+   max-width: 95%;
+   margin: 0 auto;
+   @media (min-width:1024px) {
+      max-width: 85%;
+   }
+   @media (min-width:400px) {
+      max-width: 90%;
+   }
+   @media (min-width:320px) {
+      max-width: 80%;
+   }
+}
+
+h1 {
+   font-family: Oswald;
+}
+
+.title-line {
+   &::after {
+      content: '';
+      position: absolute;
+      background: #68B738;
+      width: 90%;
+      height: 1px;
+      z-index: -10;
+      transform: translate(0, 10px);
+      left: 10%;
+
+      @media (min-width:600px) {
+         left: 0;
+         width: 100%;
+         transform: translate(0, 20px);
+
+      }
+   }
+}

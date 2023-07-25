@@ -1,0 +1,89 @@
+.pros__page {
+   font-family: Oswald;
+
+}
+
+
+.pros__title {
+   letter-spacing: 0em;
+   font-size: 36px;
+   line-height: 110%;
+
+}
+
+.pros__list {
+   display: flex;
+   flex-direction: column;
+   margin: 40px 0 0 0;
+
+   @media (min-width:600px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+}
+
+.pros__item {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+
+   & :not(:last-child) {
+      margin: 0 0 20px 0;
+   }
+
+   @media (min-width:600px) {
+      flex-direction: column;
+      width: 40%;
+      height: 280px;
+   }
+   @media (min-width:1024px) {
+      width: 18%;
+   }
+}
+
+.pros__item-text {
+   color: #444444;
+   font-size: 12px;
+   flex: 70% 0 1;
+   line-height: 150%;
+   text-align: left;
+   font-family: Arial;
+
+   @media (min-width:600px) {
+      font-size: 16px;
+
+   }
+}
+
+.pros__item-image {
+   margin: 0 12px 0 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: 20% 0 1;
+   height: 60px;
+   background: #68B738;
+
+   @media (min-width:600px) {
+      width: 80px;
+      height: 80px;
+   }
+}
+
+.pros__item-number {
+   z-index: -10;
+   font-size: 280px;
+   color: #F2F2F2;
+   position: absolute;
+   left: 110px;
+   line-height: 200px;
+
+   img {
+      width: 100%;
+      height: 100%;
+   }
+   @media (max-width:600px) {
+   display: none;
+   }
+}

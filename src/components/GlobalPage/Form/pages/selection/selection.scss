@@ -1,0 +1,133 @@
+input {
+   font-size: 16px;
+   text-transform: uppercase;
+}
+
+.selection__container {
+   border-top: 1px solid #E7E7E7;
+   text-transform: uppercase;
+   font-family: Oswald;
+   font-size: 16px;
+   letter-spacing: 0em;
+   text-align: left;
+   padding: 20px 0 25px 0;
+
+   @media (min-width:900px) {
+      display: grid;
+      
+      grid-template-areas: 'A A'
+         'B C';
+   }
+}
+
+.selection__titles {
+   grid-area: A;
+}
+
+.selection__title {
+   font-size: 36px;
+   text-transform: none;
+}
+
+.selection__subtitle {
+   font-family: Oswald;
+   font-size: 14px;
+   line-height: 125%;
+   margin: 40px 0;
+   text-transform: uppercase;
+}
+
+.labels__list {
+   grid-area: B;
+   margin: 20px 0 0 0;
+   padding: 0 0 20px 0;
+   @media (min-width:900px) {
+      padding: 0;
+      margin: 0 5% 0 0 ;
+   }
+}
+
+.labels__item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+
+   &:not(:last-child) {
+      margin: 0 0 20px 0;
+   }
+}
+
+.labels__item-input {
+   width: 100%;
+   height: 45px;
+   border: 1px solid #E7E7E7;
+
+}
+
+.labels__item-title {
+   font-family: Oswald;
+   margin: 0 10px 0 0;
+}
+
+.type__list {
+   grid-area: C;
+   width: 100%;
+   padding: 25px 0 ;
+   margin: 20px 0 0 0;
+   border-top: 1px solid #CDCDCD;
+   border-bottom: 1px solid #CDCDCD;
+
+   @media (min-width:600px) {
+      margin: 0;
+      padding: 25px;
+      border: 1px solid #CDCDCD;
+   }
+}
+
+.type__item {
+   display: flex;
+   align-items: center;
+}
+
+.type__item-input-cont {
+   width: 31px;
+   height: 31px;
+   background: #CDCDCD;
+   margin: 0 20px 0 0;
+   border-radius: 100%;
+
+}
+
+.type__item-input {
+   position: absolute;
+   z-index: -10;
+   opacity: 0;
+
+   &+label {
+      display: inline-block;
+      align-items: center;
+      user-select: none;
+
+      &::before {
+         content: '';
+         display: inline-block;
+         width: 30px;
+         height: 30px;
+         border: 10px solid white;
+         background-color: white;
+         border-radius: 100%;
+      }
+
+   }
+
+   &:checked+label::before {
+      background-color: green;
+   }
+
+   &:disabled+label::before {
+      background-color: firebrick;
+   }
+
+   &:hover+label::before {}
+}
